@@ -6,14 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
-    <link rel="stylesheet" href="../src/bootstrap-5.3.3-dist/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="../src/bootstrap-5.3.3-dist/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container-fluid">
-        <header>
-
+        <header class="d-flex justify-content-center py-3 border-bottom border-secondary">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Dashboard</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contas</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Cartoes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Transacoes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Relatorios</a></li>
+            </ul>
         </header>
+
+        <main class="mt-3">
+            <div class="row gy-4">
+                <div class="col-md-3">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header">Saldo Total</div>
+                        <div class="card-body">
+                            <h5 class="card-title">R$ 10.000,00</h5>
+                            <p class="card-text">Saldo disponível em todas as contas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-header">Receitas do Mês</div>
+                        <div class="card-body">
+                            <h5 class="card-title">R$ 5.000,00</h5>
+                            <p class="card-text">Total de receitas até agora.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-danger mb-3">
+                        <div class="card-header">Despesas do Mês</div>
+                        <div class="card-body">
+                            <h5 class="card-title">R$ 4.000,00</h5>
+                            <p class="card-text">Total de despesas até agora.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-info mb-3">
+                        <div class="card-header">Restante do Mês</div>
+                        <div class="card-body">
+                            <h5 class="card-title">R$ 1.000,00</h5>
+                            <p class="card-text">Saldo disponível após receitas e despesas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
     </div>
 </body>
 
