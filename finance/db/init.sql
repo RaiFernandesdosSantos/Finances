@@ -56,13 +56,11 @@ create table if not exists finance.movimentacao(
     valor_parcelas int not null,
     total_ocorrencias int,
     fk_fatura int,
-    fk_conta_destino int,
     tipo_movimentacao tipo_movimentacao_enum not null,
     constraint fk_conta foreign key (fk_conta) references finance.conta(id),
     constraint fk_categoria foreign key (fk_categoria) references finance.categoria(id),
     constraint fk_fatura foreign key (fk_fatura) references finance.fatura(id),
-    constraint fk_conta_destino foreign key (fk_conta_destino) references finance.conta(id),
-    constraint chk_transferencia_conta_destino check (fk_conta_destino is not null and tipo_movimentacao = 'T')
+    constraint fk_conta_destino foreign key (fk_conta_destino) references finance.conta(id)
 );
 
 create table if not exists finance.fatura(
